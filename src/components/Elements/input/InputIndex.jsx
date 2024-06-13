@@ -11,6 +11,7 @@ const Input = (props) => {
       autoComplete={autoComplete}
       accept={accept}
       onChange={onChange}
+      spellCheck="false"
     />
   );
 };

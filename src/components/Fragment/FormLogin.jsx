@@ -1,49 +1,47 @@
 import React, { useState } from "react";
 import Button from "../Elements/Button/ButtonIndex";
 import InputForm from "../Elements/input";
-import axios from "axios";
+import { Navigate } from "react-router-dom";
+import { toast, Toaster } from "sonner";
 
 const FormLogin = () => {
-  const [post, setPost] = useState({
-    fullName: "",
-  });
+  const [fullName, setFullName] = useState("");
+  const [navigate, setNavigate] = useState(false);
 
-  const handleInput = (event) => {
-    setPost({ ...post, [event.target.name]: event.target.value });
-  };
-
-  const handleSubmit = async (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
-    try {
-      console.log("Data yang akan dikirim:", post); // Verifikasi nilai sebelum pengiriman
-      const response = await axios.post(
-        "https://666a768c7013419182cf5d89.mockapi.io/notev1/form",
-        post
-      );
-      console.log("Data nama dikirim:", response.data);
-      // Tambahkan logika tambahan di sini jika diperlukan (misalnya reset form atau mengarahkan ke halaman lain)
-    } catch (err) {
-      console.error("Error mengirim data:", err);
-      // Tambahkan logika penanganan kesalahan di sini jika diperlukan
+    if (fullName.length < 10) {
+      toast.error("Full name must be at least 10 characters long."); // Tampilkan toast error jika validasi gagal
+      return; // Jangan melakukan navigasi jika validasi gagal
     }
+    // Validasi berhasil, lanjutkan dengan navigasi
+    localStorage.setItem("fullName", fullName);
+    setNavigate(true);
   };
+
+  if (navigate) {
+    return <Navigate to={`/form?fullName=${encodeURIComponent(fullName)}`} />;
+  }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <InputForm
-        label=""
-        type="text"
-        placeholder="in here"
-        name="fullName"
-        value={post.fullName}
-        autoComplete="text"
-        onChange={handleInput}
-      />
-
-      <Button className="bg-zinc-800 w-full ease-in-out duration-200 hover:bg-black">
-        Submit
-      </Button>
-    </form>
+    <>
+      <form onSubmit={handleSubmit}>
+        <InputForm
+          label=""
+          type="text"
+          placeholder="Enter your full name"
+          value={fullName}
+          onChange={(event) => setFullName(event.target.value)}
+        />
+        <Button
+          type="submit"
+          className="bg-zinc-800 w-full ease-in-out duration-200 hover:bg-black"
+        >
+          Submit
+        </Button>
+        <Toaster />
+      </form>
+    </>
   );
 };
 

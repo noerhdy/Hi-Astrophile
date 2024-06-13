@@ -1,10 +1,12 @@
-import "./index.css";
+import "../index.css";
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { RoutesConfig } from "@/config";
+import LoginSection from "./LoginSection";
+import LoadingSection from "./LoadingSection";
+import DialogDemo from "@/components/Elements/Dialog/DialogDemo";
 
-function App() {
+function IndexHome() {
   // const [notes, setNotes] = useState([]);
 
   // const getNotes = async () => {
@@ -24,9 +26,13 @@ function App() {
 
   return (
     <>
-      <RoutesConfig />
+      <section className="flex flex-col min-h-screen items-center overflow-hidden  ">
+        <DialogDemo />
+        {/* <LoginSection />
+        <LoadingSection /> */}
+      </section>
     </>
   );
 }
 
-export default App;
+export default IndexHome;
