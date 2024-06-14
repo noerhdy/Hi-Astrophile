@@ -76,7 +76,7 @@ const DialogBody = ({ selectedOption, onCheckboxChange, formData }) => {
             autoComplete="off"
             name="numberWa"
             value={post.numberWa}
-            type="text" // Gunakan type="text" jika hanya menerima karakter angka
+            type="number" // Gunakan type="text" jika hanya menerima karakter angka
             placeholder="14-0-45 ?"
             onChange={handleInput}
           />

@@ -20,6 +20,7 @@ const DialogDemo = ({ formData }) => {
 
   const handleSubmit = async () => {
     try {
+      formData.time = new Date().toLocaleString();
       const response = await axios.post(
         "https://666a768c7013419182cf5d89.mockapi.io/notev1/v1",
         formData
@@ -33,26 +34,28 @@ const DialogDemo = ({ formData }) => {
   };
 
   return (
-    <Dialog>
-      <DialogTrigger asChild>
-        <Button variant="outline">Edit Profil</Button>
-      </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
-        <DialogHeader>
-          <DialogHead selectedOption={selectedOption} />
-        </DialogHeader>
-        <DialogBody
-          selectedOption={selectedOption}
-          onCheckboxChange={handleCheckboxChange}
-          formData={formData} // Kirim formData ke DialogBody
-        />
-        <DialogFooter>
-          <Button onClick={handleSubmit} type="button">
-            Konfirmasi
-          </Button>
-        </DialogFooter>
-      </DialogContent>
-    </Dialog>
+    <>
+      <Dialog>
+        <DialogTrigger asChild>
+          <Button variant="outline">Edit Profil</Button>
+        </DialogTrigger>
+        <DialogContent className="sm:max-w-[425px]">
+          <DialogHeader>
+            <DialogHead selectedOption={selectedOption} />
+          </DialogHeader>
+          <DialogBody
+            selectedOption={selectedOption}
+            onCheckboxChange={handleCheckboxChange}
+            formData={formData} // Kirim formData ke DialogBody
+          />
+          <DialogFooter>
+            <Button onClick={handleSubmit} type="button">
+              Konfirmasi
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+    </>
   );
 };
 
