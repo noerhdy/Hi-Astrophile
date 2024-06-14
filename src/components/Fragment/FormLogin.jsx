@@ -20,7 +20,7 @@ const FormLogin = () => {
   };
 
   if (navigate) {
-    return <Navigate to={`/form?fullName=${encodeURIComponent(fullName)}`} />;
+    return <Navigate to={`/v1?fullName=${encodeURIComponent(fullName)}`} />;
   }
 
   return (

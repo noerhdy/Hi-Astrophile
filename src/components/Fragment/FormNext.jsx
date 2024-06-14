@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import InputForm from "../Elements/input";
 import Button from "../Elements/Button/ButtonIndex";
-import axios from "axios";
 import Label from "../Elements/input/LabelIndex";
 import { Textarea } from "../ui/textarea";
+import DialogDemo from "../Elements/Dialog/DialogDemo";
 
 const FormNext = () => {
   const location = useLocation();
@@ -25,25 +25,12 @@ const FormNext = () => {
     }
   }, [location.search]);
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    try {
-      const response = await axios.post(
-        "https://666a768c7013419182cf5d89.mockapi.io/notev1/form",
-        post
-      );
-      console.log("Data nama dikirim:", response.data);
-    } catch (err) {
-      console.error("Error mengirim data:", err);
-    }
-  };
-
   const handleInput = (event) => {
     setPost({ ...post, [event.target.name]: event.target.value });
   };
 
   return (
-    <form onSubmit={handleSubmit} autoComplete="off">
+    <form autoComplete="off">
       <InputForm
         label="nickname"
         type="text"
@@ -89,10 +76,7 @@ const FormNext = () => {
           placeholder="secara singkat saja tak perlu sampai menjadi beberapa halaman, karna di halaman selanjutnya semoga bisa mengenalmu secara langsung hehe"
         />
       </Label>
-
-      <Button className="bg-zinc-800 w-full ease-in-out duration-200 hover:bg-black">
-        Submit
-      </Button>
+      <DialogDemo />
     </form>
   );
 };

@@ -1,9 +1,9 @@
 const Label = (props) => {
-  const { children, htmlFor } = props;
+  const { children, htmlFor, classname = "mb-2" } = props;
   return (
     <label
       htmlFor={htmlFor}
-      className="block text-zinc-800 dark:text-white text-sm font-medium  mb-2"
+      className={`block text-zinc-800 dark:text-white text-sm ${classname} font-medium `}
     >
       {children}
     </label>

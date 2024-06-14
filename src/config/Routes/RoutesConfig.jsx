@@ -9,7 +9,7 @@ const RoutesConfig = () => {
       <Routes>
         <Route index element={<IndexHome />} />
         <Route path="/" element={<IndexHome />} />
-        <Route path="/form" element={<IndexForm />} />
+        <Route path="/v1" element={<IndexForm />} />
       </Routes>
     </Router>
   );
