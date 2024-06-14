@@ -28,8 +28,8 @@ const DialogBody = ({ selectedOption, onCheckboxChange, formData }) => {
   }, [formData, post.numberWa]);
 
   return (
-    <div className="flex flex-col gap-2">
-      <div className="flex flex-col justify-center w-full bg-zinc-100 py-1 px-2 rounded-md items-center">
+    <div className="flex flex-col gap-2 ">
+      <div className="flex flex-col justify-center w-full shadow-md bg-zinc-100 py-1 px-2 rounded-md items-center">
         <Label>njaok wa bro</Label>
         <div className="flex py-2 gap-12 mb-4">
           <div className="flex justify-center items-center">

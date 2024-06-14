@@ -43,7 +43,7 @@ const DialogDemo = ({ formData }) => {
         <DialogTrigger asChild>
           <Button className="bg-zinc-950 text-zinc-100 ">Next maneee</Button>
         </DialogTrigger>
-        <DialogContent className="sm:max-w-[425px]">
+        <DialogContent className="sm:max-w-[425px] w-[90vw] rounded-md shadow">
           <DialogHeader>
             <DialogHead selectedOption={selectedOption} />
           </DialogHeader>
