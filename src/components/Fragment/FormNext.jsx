@@ -38,7 +38,7 @@ const FormNext = () => {
         placeholder="name as u call?"
         name="nickName"
         value={post.nickName}
-        autoComplete="text"
+        autoComplete="off"
         onChange={handleInput}
       />
       <InputForm
@@ -47,7 +47,7 @@ const FormNext = () => {
         placeholder="where u go home?"
         name="address"
         value={post.address}
-        autoComplete="text"
+        autoComplete="off"
         onChange={handleInput}
       />
       <InputForm
@@ -56,7 +56,7 @@ const FormNext = () => {
         placeholder="here"
         name="born"
         value={post.born}
-        autoComplete="text"
+        autoComplete="off"
         onChange={handleInput}
       />
       <InputForm
@@ -65,7 +65,7 @@ const FormNext = () => {
         placeholder="like, hobbies, foods, or songs that you often listen to. give me some of your like it."
         name="favorite"
         value={post.favorite}
-        autoComplete="text"
+        autoComplete="off"
         onChange={handleInput}
       />
       <Label>
@@ -74,7 +74,8 @@ const FormNext = () => {
           name="story"
           value={post.story}
           onChange={handleInput}
-          placeholder="secara singkat saja tak perlu sampai menjadi beberapa halaman, karna di halaman selanjutnya semoga bisa mengenalmu secara langsung hehe"
+          placeholder="hehehehehehhe 🗿"
+          // placeholder="secara singkat saja tak perlu sampai menjadi beberapa halaman, karna di halaman selanjutnya semoga bisa mengenalmu secara langsung hehe"
         />
       </Label>
       <DialogDemo formData={post} /> {/* Mengirim formData ke DialogDemo */}

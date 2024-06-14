@@ -37,7 +37,7 @@ const FormLogin = () => {
           type="submit"
           className="bg-zinc-800 w-full ease-in-out duration-200 hover:bg-black"
         >
-          Submit
+          Next
         </Button>
         <Toaster />
       </form>

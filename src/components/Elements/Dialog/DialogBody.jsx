@@ -39,7 +39,7 @@ const DialogBody = ({ selectedOption, onCheckboxChange, formData }) => {
               onCheckedChange={() => handleCheckboxChange("takBoleh")}
             />
             <Label
-              className={`mb-0 mx-2 font-normal ${
+              classname={`mb-0 mx-2 font-normal ${
                 selectedOption === "takBoleh"
                   ? "text-zinc-800 font-semibold"
                   : "text-zinc-400"
@@ -54,13 +54,13 @@ const DialogBody = ({ selectedOption, onCheckboxChange, formData }) => {
               onCheckedChange={() => handleCheckboxChange("boleh")}
             />
             <Label
-              className={`mb-0 mx-2 font-normal   ${
+              classname={`mb-0 mx-2 font-normal   ${
                 selectedOption === "takBoleh"
                   ? "text-zinc-400"
                   : "text-green-500 font-semibold"
               }`}
             >
-              boleh hehe
+              Bwoleh hehe
             </Label>
           </div>
         </div>
@@ -77,7 +77,7 @@ const DialogBody = ({ selectedOption, onCheckboxChange, formData }) => {
             name="numberWa"
             value={post.numberWa}
             type="number" // Gunakan type="text" jika hanya menerima karakter angka
-            placeholder="14-0-45 ?"
+            placeholder="08 berapa cantik? le koe lanang yo sepurane 🗿"
             onChange={handleInput}
           />
         </div>

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const LoginSection = () => {
   return (
     <>
-      <div className="w-full max-w-screen-sm min-h-screen  flex flex-col border justify-center items-center bg-gradient-to-t from-[#e1b19e] from-40%  bg-[#fefefe] relative">
+      <div className="w-full max-w-screen-sm min-h-screen flex flex-col border justify-center items-center bg-gradient-to-t from-[#e1b19e] from-40%  bg-[#fefefe] relative">
         <motion.div
           initial={{ y: -1000, opacity: 0 }}
           animate={{
@@ -19,11 +19,13 @@ const LoginSection = () => {
           className="flex flex-col space-y-4  text-start pb-12  "
         >
           <div className="flex font-medium flex-col text-4xl text-black dark:text-white text balance">
-            <span>Hi</span>
-            <span>Astrophile</span>
+            {/* <span>Hi</span>
+            <span>Astrophile</span> */}
+            <span>Hello</span>
+            <span>Bro</span>
           </div>
           <h5 className="text-xs text-zinc-500 w-60 ">
-            Maukah kau memberitahu nama lengkapmu
+            {/* Maukah kau memberitahu nama lengkapmu */} Nama Lengkap bro
           </h5>
           <FormLogin />
         </motion.div>

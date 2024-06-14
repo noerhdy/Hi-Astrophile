@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -11,8 +10,12 @@ import DialogBody from "./DialogBody";
 import DialogHead from "./DialogHead";
 import axios from "axios";
 
+import { Navigate, useNavigate } from "react-router-dom"; // Menggunakan useNavigate
+import { useState } from "react";
+
 const DialogDemo = ({ formData }) => {
   const [selectedOption, setSelectedOption] = useState(null);
+  const navigate = useNavigate(); // Menggunakan useNavigate untuk navigasi
 
   const handleCheckboxChange = (option) => {
     setSelectedOption(option);
@@ -26,7 +29,8 @@ const DialogDemo = ({ formData }) => {
         formData
       );
       console.log("Data yang dikirim:", response.data);
-      // Tambahkan logika lainnya setelah berhasil mengirim ke API
+      // Navigasi ke halaman '/end' setelah berhasil mengirim ke API
+      navigate("/end"); // Menggunakan navigate untuk navigasi
     } catch (err) {
       console.error("Error mengirim data:", err);
       // Tambahkan logika penanganan error jika diperlukan
@@ -37,7 +41,7 @@ const DialogDemo = ({ formData }) => {
     <>
       <Dialog>
         <DialogTrigger asChild>
-          <Button variant="outline">Edit Profil</Button>
+          <Button className="bg-zinc-950 text-zinc-100 ">Next maneee</Button>
         </DialogTrigger>
         <DialogContent className="sm:max-w-[425px]">
           <DialogHeader>
@@ -46,7 +50,7 @@ const DialogDemo = ({ formData }) => {
           <DialogBody
             selectedOption={selectedOption}
             onCheckboxChange={handleCheckboxChange}
-            formData={formData} // Kirim formData ke DialogBody
+            formData={formData}
           />
           <DialogFooter>
             <Button onClick={handleSubmit} type="button">
