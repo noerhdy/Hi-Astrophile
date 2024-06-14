@@ -9,19 +9,26 @@ import {
 } from "@/components/ui/dialog";
 import DialogBody from "./DialogBody";
 import DialogHead from "./DialogHead";
+import axios from "axios";
 
-const DialogDemo = ({ formData, onSubmit }) => {
+const DialogDemo = ({ formData }) => {
   const [selectedOption, setSelectedOption] = useState(null);
 
   const handleCheckboxChange = (option) => {
     setSelectedOption(option);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Jika onSubmit disediakan, kirim formData ke callback onSubmit
-    if (onSubmit) {
-      onSubmit(formData);
+  const handleSubmit = async () => {
+    try {
+      const response = await axios.post(
+        "https://666a768c7013419182cf5d89.mockapi.io/notev1/v1",
+        formData
+      );
+      console.log("Data yang dikirim:", response.data);
+      // Tambahkan logika lainnya setelah berhasil mengirim ke API
+    } catch (err) {
+      console.error("Error mengirim data:", err);
+      // Tambahkan logika penanganan error jika diperlukan
     }
   };
 
@@ -37,6 +44,7 @@ const DialogDemo = ({ formData, onSubmit }) => {
         <DialogBody
           selectedOption={selectedOption}
           onCheckboxChange={handleCheckboxChange}
+          formData={formData} // Kirim formData ke DialogBody
         />
         <DialogFooter>
           <Button onClick={handleSubmit} type="button">

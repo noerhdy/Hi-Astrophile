@@ -1,15 +1,14 @@
-"use client";
-
+import React, { useState, useEffect } from "react";
 import { Checkbox } from "@/components/ui/checkbox";
 import Label from "../input/LabelIndex";
 import InputForm from "../input";
-import { useState } from "react";
 
-const DialogBody = ({ selectedOption, onCheckboxChange }) => {
+const DialogBody = ({ selectedOption, onCheckboxChange, formData }) => {
   const [post, setPost] = useState({
     numberWa: "",
   });
 
+  // Handle perubahan checkbox
   const handleCheckboxChange = (option) => {
     if (selectedOption === option) {
       onCheckboxChange(null);
@@ -18,9 +17,15 @@ const DialogBody = ({ selectedOption, onCheckboxChange }) => {
     }
   };
 
+  // Handle perubahan input
   const handleInput = (event) => {
     setPost({ ...post, [event.target.name]: event.target.value });
   };
+
+  useEffect(() => {
+    // Memastikan bahwa nilai numberWa dari formData diteruskan ke state lokal
+    formData.numberWa = post.numberWa; // Perubahan 1: Mengubah nilai langsung pada formData
+  }, [formData, post.numberWa]);
 
   return (
     <div className="flex flex-col gap-2">
@@ -34,7 +39,7 @@ const DialogBody = ({ selectedOption, onCheckboxChange }) => {
               onCheckedChange={() => handleCheckboxChange("takBoleh")}
             />
             <Label
-              classname={`mb-0 mx-2 font-normal ${
+              className={`mb-0 mx-2 font-normal ${
                 selectedOption === "takBoleh"
                   ? "text-zinc-800 font-semibold"
                   : "text-zinc-400"
@@ -43,13 +48,13 @@ const DialogBody = ({ selectedOption, onCheckboxChange }) => {
               Tak boleh
             </Label>
           </div>
-          <div className="flex justify-center items-center ">
+          <div className="flex justify-center items-center">
             <Checkbox
               checked={selectedOption === "boleh"}
               onCheckedChange={() => handleCheckboxChange("boleh")}
             />
             <Label
-              classname={`mb-0 mx-2 font-normal   ${
+              className={`mb-0 mx-2 font-normal   ${
                 selectedOption === "takBoleh"
                   ? "text-zinc-400"
                   : "text-green-500 font-semibold"
@@ -68,12 +73,11 @@ const DialogBody = ({ selectedOption, onCheckboxChange }) => {
         >
           <InputForm
             className="ease duration-200"
-            autocomplete="off"
+            autoComplete="off"
             name="numberWa"
             value={post.numberWa}
-            type="number"
+            type="text" // Gunakan type="text" jika hanya menerima karakter angka
             placeholder="14-0-45 ?"
-            autoComplete="number"
             onChange={handleInput}
           />
         </div>

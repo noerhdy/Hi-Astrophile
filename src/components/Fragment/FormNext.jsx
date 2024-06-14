@@ -25,6 +25,7 @@ const FormNext = () => {
     }
   }, [location.search]);
 
+  // Menangani perubahan input
   const handleInput = (event) => {
     setPost({ ...post, [event.target.name]: event.target.value });
   };
@@ -76,7 +77,7 @@ const FormNext = () => {
           placeholder="secara singkat saja tak perlu sampai menjadi beberapa halaman, karna di halaman selanjutnya semoga bisa mengenalmu secara langsung hehe"
         />
       </Label>
-      <DialogDemo />
+      <DialogDemo formData={post} /> {/* Mengirim formData ke DialogDemo */}
     </form>
   );
 };
