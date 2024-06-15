@@ -58,21 +58,43 @@ const EndPage = () => {
   }, [highlightedLineIndex]);
 
   useEffect(() => {
-    toast.success("Terimakasih cantik!");
+    toast.success("terimakasih ✨");
     const timeout1 = setTimeout(() => {
-      toast.success("nek koe lanang");
-    }, 3000);
+      toast.success("tetap semangat 🌻");
+    }, 4000);
     const timeout2 = setTimeout(() => {
-      toast.success("sepurane lek sepurane 🗿");
+      toast.success("semoga harimu menyenangkan 🍦");
     }, 6000);
     const timeout3 = setTimeout(() => {
-      toast.success("SUWON SISAN LEK 🗿");
-    }, 9000);
+      toast.success("dah dah 👋");
+    }, 8000);
+    const timeout4 = setTimeout(() => {
+      toast.success("masih disini? 😂 ");
+    }, 64000);
+    const timeout5 = setTimeout(() => {
+      toast.success(
+        "btw foto awan diawal tadi aku ngambil dari sorotan ig kamu"
+      );
+    }, 68000);
+    const timeout6 = setTimeout(() => {
+      toast.success("maaf aku pake dan belum ijin 🙏");
+    }, 72000);
+    const timeout7 = setTimeout(() => {
+      toast.success("udah gitu aja");
+    }, 76000);
+    const timeout8 = setTimeout(() => {
+      toast.success("dah dah lagi 👋🤣");
+    }, 78000);
 
     return () => {
       clearTimeout(timeout1);
       clearTimeout(timeout2);
       clearTimeout(timeout3);
+      clearTimeout(timeout4);
+      clearTimeout(timeout5);
+      clearTimeout(timeout6);
+      clearTimeout(timeout7);
+      clearTimeout(timeout8);
     };
   }, []);
 
@@ -113,29 +135,26 @@ const EndPage = () => {
           className="w-full bg-zinc-100 rounded shadow"
         >
           <source src="/song/rc.mp3" type="audio/mpeg" />
-          Your browser does not support the audio element.
         </audio>
-        <div className="flex w-full my-12 rounded-md bg-zinc-100 shadow">
+        <div className="flex w-full my-12 rounded-md bg-zinc-100 shadow-md">
           <div className="w-full rounded my-8 max-h-60 overflow-hidden">
             <div
               ref={lyricsContainerRef}
-              className="lyrics relative w-full text-center max-h-60 overflow-y-auto no-scrollbar"
+              className="lyrics relative w-auto text-start max-h-60 mx-6 overflow-y-auto no-scrollbar"
             >
               {lyricsData.map((line, index) => (
                 <p
                   key={index}
                   className={clsx(
-                    "transition-all duration-300 ease-in-out py-1 text-wrap text-lg",
+                    "transition-all duration-300 ease-in-out py-2 text-wrap text-lg",
                     index === highlightedLineIndex
-                      ? "text-zinc-950 text-xl font-bold"
+                      ? "text-zinc-900 text-xl font-bold "
                       : "text-gray-700"
                   )}
                   style={{
                     opacity: index === highlightedLineIndex ? 1 : 0.5,
                     transform:
-                      index === highlightedLineIndex
-                        ? "scale(1)"
-                        : "scale(0.9)",
+                      index === highlightedLineIndex ? "scale(1)" : "scale(1)",
                   }}
                 >
                   {line.text}

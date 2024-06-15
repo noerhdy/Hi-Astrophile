@@ -29,9 +29,13 @@ const DialogBody = ({ selectedOption, onCheckboxChange, formData }) => {
 
   return (
     <div className="flex flex-col gap-2 ">
-      <div className="flex flex-col justify-center w-full shadow-md bg-zinc-100 py-1 px-2 rounded-md items-center">
-        <Label>njaok wa bro</Label>
-        <div className="flex py-2 gap-12 mb-4">
+      <div className="flex flex-col justify-center w-full shadow-md bg-zinc-100 py-1 px-2 rounded-md items-start">
+        <div className="flex flex-col p-2 text-sm w-auto">
+          <span>beli coklat ke surabaya, pulangnya beli sapu</span>
+          <span>kalo kamu belum ada yg punya,</span>
+          <span>boleh minta no wa kamu? 😂</span>
+        </div>
+        <div className="flex p-2 gap-12 w-full mb-4">
           <div className="flex justify-center items-center">
             <Checkbox
               className="border-double"
@@ -45,7 +49,7 @@ const DialogBody = ({ selectedOption, onCheckboxChange, formData }) => {
                   : "text-zinc-400"
               }`}
             >
-              Tak boleh
+              Tidak boleh
             </Label>
           </div>
           <div className="flex justify-center items-center">
@@ -60,7 +64,7 @@ const DialogBody = ({ selectedOption, onCheckboxChange, formData }) => {
                   : "text-green-500 font-semibold"
               }`}
             >
-              Bwoleh hehe
+              Boleh hehe
             </Label>
           </div>
         </div>
@@ -76,8 +80,8 @@ const DialogBody = ({ selectedOption, onCheckboxChange, formData }) => {
             autoComplete="off"
             name="numberWa"
             value={post.numberWa}
-            type="number" // Gunakan type="text" jika hanya menerima karakter angka
-            placeholder="08 berapa cantik? le koe lanang yo sepurane 🗿"
+            type="number" //
+            placeholder="08 berapa cantik? "
             onChange={handleInput}
           />
         </div>

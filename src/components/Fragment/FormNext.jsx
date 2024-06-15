@@ -53,7 +53,7 @@ const FormNext = () => {
       <InputForm
         label="place & date birth"
         type="text"
-        placeholder="here"
+        placeholder="surabaya,11-10-2002"
         name="born"
         value={post.born}
         autoComplete="off"
@@ -62,23 +62,25 @@ const FormNext = () => {
       <InputForm
         label="favorite"
         type="text"
-        placeholder="like, hobbies, foods, or songs that you often listen to. give me some of your like it."
+        placeholder="like hobbies, foods, or songs that you often listen to. give me some of your like it."
         name="favorite"
         value={post.favorite}
         autoComplete="off"
         onChange={handleInput}
       />
       <Label>
-        can you tell me your story
+        can you tell me about you
         <Textarea
+          clas
           name="story"
           value={post.story}
           onChange={handleInput}
-          placeholder="hehehehehehhe 🗿"
-          // placeholder="secara singkat saja tak perlu sampai menjadi beberapa halaman, karna di halaman selanjutnya semoga bisa mengenalmu secara langsung hehe"
+          placeholder="secara singkat saja tak perlu sampai menjadi beberapa halaman, karna di halaman selanjutnya semoga bisa mengenalmu secara langsung hehe"
         />
       </Label>
-      <DialogDemo formData={post} /> {/* Mengirim formData ke DialogDemo */}
+      <div className="w-full flex  justify-end items-end">
+        <DialogDemo formData={post} />
+      </div>
     </form>
   );
 };

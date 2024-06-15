@@ -9,14 +9,22 @@ const FormSection = () => {
           className="object-cover max-w-50 rounded-md bg-center  "
           src="img/ng.gif"
         ></img>
-        <div className="flex w-full bg-zinc-300 p-4 drop-shadow-md rounded-md">
-          <p className="text-balance text-zinc-600">
-            pokoke isine epilog rek tapi sek dorong kober gae mumet sekan, teros
-            opo kok nak ndokor iki poto awan? yo sak karepku apene potomu
-            nambahi mumet lek nyawang, wes isien nak nisor iki rausah wedi tak
-            gae pinjol. wong mek pgn eroh koe kok 🗿🗿🗿
+        <div className="flex w-full flex-col text-balance text-zinc-800 space-y-2  bg-zinc-100 p-6 drop-shadow-md rounded-md">
+          <p>Hallo 👋</p>
+          <p>
+            jangan takut, saya bukan orang jahat dan bukan orang yang ingin
+            menculikmu kok, mungkin dengan cara ini saya bisa selangkah
+            mengenalmu tanpa bertatap muka atau bertemu dahulu.
           </p>
+          <p>
+            oh iya sebelumnya apa kabar? bagaimana hari ini? bagaimana mood kamu
+            sekarang?, kalo lagi gamod atau capek boleh kamu abaikan kok karna
+            saya gak ingin menganggu waktumu.
+          </p>
+          <p>semangat </p>
         </div>
+      </div>
+      <div className="flex w-full flex-col text-balance text-zinc-800 mt-4 pt-12  bg-zinc-100 p-6 drop-shadow-md rounded-md">
         <FormNext />
       </div>
     </div>

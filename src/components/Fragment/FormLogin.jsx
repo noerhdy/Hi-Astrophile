@@ -29,16 +29,18 @@ const FormLogin = () => {
         <InputForm
           label=""
           type="text"
-          placeholder="Enter your full name"
+          placeholder="here"
           value={fullName}
           onChange={(event) => setFullName(event.target.value)}
         />
-        <Button
-          type="submit"
-          className="bg-zinc-800 w-full ease-in-out duration-200 hover:bg-black"
-        >
-          Next
-        </Button>
+        <div className="w-full flex  justify-end items-end">
+          <Button
+            type="submit"
+            className="bg-zinc-800 w-full ease-in-out duration-200 hover:bg-black"
+          >
+            next
+          </Button>
+        </div>
         <Toaster />
       </form>
     </>
