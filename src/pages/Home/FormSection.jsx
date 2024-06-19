@@ -7,11 +7,12 @@ const FormSection = () => {
       <div className="flex flex-col space-y-4 ">
         <img
           className="object-cover max-w-50 rounded-md bg-center  "
-          src="img/ng.gif"
+          src="img/h.gif"
         ></img>
-        <div className="flex w-full flex-col text-balance text-zinc-800 space-y-2  bg-zinc-100 p-6 drop-shadow-md rounded-md">
-          <p>Hallo 👋</p>
-          <p>
+        <div className="flex w-full flex-col text-balance text-center text-zinc-800 space-y-2  bg-zinc-100 p-6 drop-shadow-md rounded-md">
+          <p className="text-xl font-bold">n't interesting who you are</p>
+          <p className="text-xl font-bold">so don't input for anything</p>
+          {/* <p>
             jangan takut, saya bukan orang jahat dan bukan orang yang ingin
             menculikmu kok, mungkin dengan cara ini saya bisa selangkah
             mengenalmu tanpa bertatap muka atau bertemu dahulu.
@@ -21,7 +22,7 @@ const FormSection = () => {
             sekarang?, kalo lagi gamod atau capek boleh kamu abaikan kok karna
             saya gak ingin menganggu waktumu.
           </p>
-          <p>semangat </p>
+          <p>semangat </p> */}
         </div>
       </div>
       <div className="flex w-full flex-col text-balance text-zinc-800 mt-4 pt-12  bg-zinc-100 p-6 drop-shadow-md rounded-md">

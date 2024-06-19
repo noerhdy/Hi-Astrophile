@@ -58,43 +58,43 @@ const EndPage = () => {
   }, [highlightedLineIndex]);
 
   useEffect(() => {
-    toast.success("terimakasih ✨");
+    toast.success("OK");
     const timeout1 = setTimeout(() => {
-      toast.success("tetap semangat 🌻");
+      toast.success("it's no longer important!");
     }, 4000);
-    const timeout2 = setTimeout(() => {
-      toast.success("semoga harimu menyenangkan 🍦");
-    }, 6000);
-    const timeout3 = setTimeout(() => {
-      toast.success("dah dah 👋");
-    }, 8000);
-    const timeout4 = setTimeout(() => {
-      toast.success("masih disini? 😂 ");
-    }, 64000);
-    const timeout5 = setTimeout(() => {
-      toast.success(
-        "btw foto awan diawal tadi aku ngambil dari sorotan ig kamu"
-      );
-    }, 68000);
-    const timeout6 = setTimeout(() => {
-      toast.success("maaf aku pake dan belum ijin 🙏");
-    }, 72000);
-    const timeout7 = setTimeout(() => {
-      toast.success("udah gitu aja");
-    }, 76000);
-    const timeout8 = setTimeout(() => {
-      toast.success("dah dah lagi 👋🤣");
-    }, 78000);
+    // const timeout2 = setTimeout(() => {
+    //   toast.success("semoga harimu menyenangkan 🍦");
+    // }, 6000);
+    // const timeout3 = setTimeout(() => {
+    //   toast.success("dah dah 👋");
+    // }, 8000);
+    // const timeout4 = setTimeout(() => {
+    //   toast.success("masih disini? 😂 ");
+    // }, 64000);
+    // const timeout5 = setTimeout(() => {
+    //   toast.success(
+    //     "btw foto awan diawal tadi aku ngambil dari sorotan ig kamu"
+    //   );
+    // }, 68000);
+    // const timeout6 = setTimeout(() => {
+    //   toast.success("maaf aku pake dan belum ijin 🙏");
+    // }, 72000);
+    // const timeout7 = setTimeout(() => {
+    //   toast.success("udah gitu aja");
+    // }, 76000);
+    // const timeout8 = setTimeout(() => {
+    //   toast.success("dah dah lagi 👋🤣");
+    // }, 78000);
 
     return () => {
       clearTimeout(timeout1);
-      clearTimeout(timeout2);
-      clearTimeout(timeout3);
-      clearTimeout(timeout4);
-      clearTimeout(timeout5);
-      clearTimeout(timeout6);
-      clearTimeout(timeout7);
-      clearTimeout(timeout8);
+      // clearTimeout(timeout2);
+      // clearTimeout(timeout3);
+      // clearTimeout(timeout4);
+      // clearTimeout(timeout5);
+      // clearTimeout(timeout6);
+      // clearTimeout(timeout7);
+      // clearTimeout(timeout8);
     };
   }, []);
 

@@ -33,9 +33,9 @@ const FormNext = () => {
   return (
     <form autoComplete="off">
       <InputForm
-        label="nickname"
+        label="name"
         type="text"
-        placeholder="name as u call?"
+        placeholder=". . . ."
         name="nickName"
         value={post.nickName}
         autoComplete="off"
@@ -44,7 +44,7 @@ const FormNext = () => {
       <InputForm
         label="address"
         type="text"
-        placeholder="where u go home?"
+        placeholder=". . . ."
         name="address"
         value={post.address}
         autoComplete="off"
@@ -53,7 +53,7 @@ const FormNext = () => {
       <InputForm
         label="place & date birth"
         type="text"
-        placeholder="surabaya,11-10-2002"
+        placeholder=". . . ."
         name="born"
         value={post.born}
         autoComplete="off"
@@ -62,20 +62,20 @@ const FormNext = () => {
       <InputForm
         label="favorite"
         type="text"
-        placeholder="like hobbies, foods, or songs that you often listen to. give me some of your like it."
+        placeholder=". . . ."
         name="favorite"
         value={post.favorite}
         autoComplete="off"
         onChange={handleInput}
       />
       <Label>
-        can you tell me about you
+        {/* can you tell me about you */}
         <Textarea
           clas
           name="story"
           value={post.story}
           onChange={handleInput}
-          placeholder="secara singkat saja tak perlu sampai menjadi beberapa halaman, karna di halaman selanjutnya semoga bisa mengenalmu secara langsung hehe"
+          placeholder=". . ."
         />
       </Label>
       <div className="w-full flex  justify-end items-end">
