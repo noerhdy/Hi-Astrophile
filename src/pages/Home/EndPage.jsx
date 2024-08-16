@@ -58,38 +58,21 @@ const EndPage = () => {
   }, [highlightedLineIndex]);
 
   useEffect(() => {
-    toast.success("OK");
+    // toast.success("OK");
     const timeout1 = setTimeout(() => {
-      toast.success("it's no longer important!");
+      toast.success("Terima Kasih 🌻");
     }, 4000);
-    // const timeout2 = setTimeout(() => {
-    //   toast.success("semoga harimu menyenangkan 🍦");
-    // }, 6000);
-    // const timeout3 = setTimeout(() => {
-    //   toast.success("dah dah 👋");
-    // }, 8000);
-    // const timeout4 = setTimeout(() => {
-    //   toast.success("masih disini? 😂 ");
-    // }, 64000);
-    // const timeout5 = setTimeout(() => {
-    //   toast.success(
-    //     "btw foto awan diawal tadi aku ngambil dari sorotan ig kamu"
-    //   );
-    // }, 68000);
-    // const timeout6 = setTimeout(() => {
-    //   toast.success("maaf aku pake dan belum ijin 🙏");
-    // }, 72000);
-    // const timeout7 = setTimeout(() => {
-    //   toast.success("udah gitu aja");
-    // }, 76000);
-    // const timeout8 = setTimeout(() => {
-    //   toast.success("dah dah lagi 👋🤣");
-    // }, 78000);
+    const timeout2 = setTimeout(() => {
+      toast.success("semoga harimu menyenangkan 🍦");
+    }, 6000);
+    const timeout3 = setTimeout(() => {
+      toast.success("semangat, dah dah 👋");
+    }, 8000);
 
     return () => {
       clearTimeout(timeout1);
-      // clearTimeout(timeout2);
-      // clearTimeout(timeout3);
+      clearTimeout(timeout2);
+      clearTimeout(timeout3);
       // clearTimeout(timeout4);
       // clearTimeout(timeout5);
       // clearTimeout(timeout6);
@@ -125,18 +108,18 @@ const EndPage = () => {
   }, [navigate]);
 
   return (
-    <section className="flex flex-col min-h-screen items-center justify-center overflow-hidden px-12 bg-[#ebebeb]">
+    <section className="flex flex-col min-h-screen items-center  justify-center overflow-hidden px-12 bg-[#ebebeb]">
       <div className="w-full max-w-screen-sm min-h-screen flex flex-col-reverse justify-center items-center">
         <audio
           autoPlay
           loop
           ref={audioRef}
           controls
-          className="w-full bg-zinc-100 rounded shadow"
+          className="w-full bg-zinc-100 rounded-2xl shadow"
         >
           <source src="/song/rc.mp3" type="audio/mpeg" />
         </audio>
-        <div className="flex w-full my-12 rounded-md bg-zinc-100 shadow-md">
+        <div className="flex w-full my-12 rounded-2xl bg-zinc-100 shadow-xl">
           <div className="w-full rounded my-8 max-h-60 overflow-hidden">
             <div
               ref={lyricsContainerRef}

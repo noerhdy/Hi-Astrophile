@@ -34,7 +34,7 @@ const EndPage2 = () => {
     toast.success("it's no longer important!");
     const timeout1 = setTimeout(() => {
       toast.success("am done!");
-    }, 4000);
+    }, 5000);
     // const timeout2 = setTimeout(() => {
     //   toast.success("semoga harimu menyenangkan 🍦");
     // }, 6000);

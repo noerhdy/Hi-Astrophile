@@ -41,7 +41,9 @@ const DialogDemo = ({ formData }) => {
     <>
       <Dialog>
         <DialogTrigger asChild>
-          <Button className="bg-zinc-950  text-zinc-100 ">next</Button>
+          <Button className="bg-zinc-950 rounded-full w-1/2 text-zinc-100 ">
+            next
+          </Button>
         </DialogTrigger>
         <DialogContent className="sm:max-w-[425px] w-[90vw] rounded-md shadow">
           <DialogHeader>
@@ -53,7 +55,11 @@ const DialogDemo = ({ formData }) => {
             formData={formData}
           />
           <DialogFooter>
-            <Button onClick={handleSubmit} type="button">
+            <Button
+              className="rounded-full"
+              onClick={handleSubmit}
+              type="button"
+            >
               Konfirmasi
             </Button>
           </DialogFooter>

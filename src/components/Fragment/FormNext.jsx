@@ -35,7 +35,7 @@ const FormNext = () => {
       <InputForm
         label="name"
         type="text"
-        placeholder=". . . ."
+        placeholder="hai, bisa aku panggil dengan siapa ini"
         name="nickName"
         value={post.nickName}
         autoComplete="off"
@@ -44,7 +44,7 @@ const FormNext = () => {
       <InputForm
         label="address"
         type="text"
-        placeholder=". . . ."
+        placeholder=" pakettt"
         name="address"
         value={post.address}
         autoComplete="off"
@@ -53,7 +53,7 @@ const FormNext = () => {
       <InputForm
         label="place & date birth"
         type="text"
-        placeholder=". . . ."
+        placeholder="tebak bintang, bintangku ada 5...🎵"
         name="born"
         value={post.born}
         autoComplete="off"
@@ -62,7 +62,7 @@ const FormNext = () => {
       <InputForm
         label="favorite"
         type="text"
-        placeholder=". . . ."
+        placeholder="nyebutin 5 dapet mie ayam hahaha"
         name="favorite"
         value={post.favorite}
         autoComplete="off"
@@ -75,7 +75,7 @@ const FormNext = () => {
           name="story"
           value={post.story}
           onChange={handleInput}
-          placeholder=". . ."
+          placeholder="ceritakan tentang dirimu, kek interview gak tuh wkwkw"
         />
       </Label>
       <div className="w-full flex  justify-end items-end">

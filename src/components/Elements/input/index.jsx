@@ -5,7 +5,7 @@ const InputForm = (props) => {
   const { label, name, type, placeholder, autoComplete, accept, onChange } =
     props;
   return (
-    <div className="mb-6">
+    <div className="mb-4">
       <Label htmlFor={name}>{label}</Label>
       <Input
         autocomplete="off"

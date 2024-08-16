@@ -16,11 +16,11 @@ const LoadingSection = () => {
       exit={{ y: window.innerWidth }}
       className="min-h-screen flex flex-col justify-center items-center fixed w-screen bg-[#fefefe] "
     >
-      <CardLoading thumbUrl="thumbnail/1.webp" delay="0.5" />
+      {/* <CardLoading thumbUrl="thumbnail/1.webp" delay="0.5" />
       <CardLoading thumbUrl="thumbnail/2.webp" delay="0.8" />
       <CardLoading thumbUrl="thumbnail/3.webp" delay="1.1" />
       <CardLoading thumbUrl="thumbnail/4.webp" delay="1.4" />
-      <CardLoading thumbUrl="thumbnail/5.webp" delay="1.7" />
+      <CardLoading thumbUrl="thumbnail/5.webp" delay="1.7" /> */}
     </motion.section>
   );
 };
