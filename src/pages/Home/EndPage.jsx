@@ -61,13 +61,13 @@ const EndPage = () => {
     // toast.success("OK");
     const timeout1 = setTimeout(() => {
       toast.success("Terima Kasih 🌻");
-    }, 4000);
+    }, 6000);
     const timeout2 = setTimeout(() => {
       toast.success("semoga harimu menyenangkan 🍦");
-    }, 6000);
+    }, 9000);
     const timeout3 = setTimeout(() => {
       toast.success("semangat, dah dah 👋");
-    }, 8000);
+    }, 12000);
 
     return () => {
       clearTimeout(timeout1);
@@ -109,7 +109,7 @@ const EndPage = () => {
 
   return (
     <section className="flex flex-col min-h-screen items-center  justify-center overflow-hidden px-12 bg-[#ebebeb]">
-      <div className="w-full max-w-screen-sm min-h-screen flex flex-col-reverse justify-center items-center">
+      <div className="max-w-screen-sm min-h-screen flex flex-col-reverse justify-center items-center">
         <audio
           autoPlay
           loop

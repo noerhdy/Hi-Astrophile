@@ -8,7 +8,7 @@ import FormLogin from "@/components/Fragment/FormLogin";
 const LoginSection = () => {
   return (
     <>
-      <div className="w-full max-w-screen-sm min-h-screen flex flex-col overflow-hidden justify-center items-center bg-[#f8f8f8] relative">
+      <div className="max-w-screen-sm min-h-screen flex flex-col overflow-hidden justify-center items-center bg-[#f8f8f8] relative">
         <motion.div
           initial={{ y: 1000, opacity: 0 }}
           animate={{
