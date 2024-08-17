@@ -5,7 +5,7 @@ const Input = (props) => {
   return (
     <input
       type={type}
-      className="text-sm w-full rounded py-2 px-3 drop-shadow-sm text-slate-700 dark:text-white dark dark:bg-zinc-900"
+      className="text-sm w-full rounded py-2 px-3 drop-shadow-sm text-zinc-950  bg-[#dcdcdc]"
       placeholder={placeholder}
       name={name}
       autoComplete={autoComplete}

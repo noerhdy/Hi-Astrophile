@@ -26,7 +26,7 @@ function IndexHome() {
 
   return (
     <>
-      <section className="flex flex-col min-h-screen items-center bg-[#f3f3f3] overflow-hidden">
+      <section className="flex flex-col min-h-screen items-center bg-[#f8f8f8] overflow-hidden">
         <LoginSection />
         {/* <LoadingSection /> */}
       </section>

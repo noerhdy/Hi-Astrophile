@@ -62,7 +62,7 @@ const FormNext = () => {
       <InputForm
         label="favorite"
         type="text"
-        placeholder="nyebutin 5 dapet mie ayam hahaha"
+        placeholder="nyebutin 5, free ice cream hahaha"
         name="favorite"
         value={post.favorite}
         autoComplete="off"
